@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+   	<meta charset="utf-8">
+      <!--IE, use best engine-->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<title>Using Bootstrap</title>  
+      <!--Adding boostrap JS-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Adding font from web -->
+      <!--<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>-->
+      <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+      <!--Adding boostrap CSS-->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!--Adding my own styling-->
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!--When using bootstrap, everything should within a container class-->
+      <div class="container">
+      <!--The frameword is made up of 12 columns, and each row can span up to that much-->
+         <div class="row">
+            <div class="col-md-6">
+               <img class="page-logo" src="images/grumpyKitty.jpg" alt="Grumpy Kitty Image">
+            </div>
+            <!--Boostrap styling to right-align and capitalize-->
+            <div class="col-md-6 text-uppercase text-right">
+               <h1 class="page-title text-thin">Brenda Cortez</h1>
+               <h3>Engineer</h3>
+            </div>
+         </div>
+         <!--Horizontal Line-->
+         <div class="row">
+            <hr />
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <!--Make iamge responsive using class img-responsive-->
+               <img src="http://placekitten.com/900/350" class="img-responsive center-block" alt="Kitten Image">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <h2 class="text-muted">Featured Work</h2>
+            </div>
+         </div>
+         <div class="row text-center">
+            <!--Make iamge responsive using class img-responsive-->
+            <!--Using text-center does not seem to work with img-responsive, so center-block can be used-->
+            <!--Adding center-block class to parent row div did not affect the images-->
+            <div class="col-md-4">
+               <img src="images/TwitterSmall.png" class="img-responsive center-block" alt="Twitter Icon">
+               <h3>TWITTER</h3>
+               <p class="link"><a href="https://twitter.com/the_hme">https://twitter.com/the_hme</a></p>
+            </div>
+            <div class="col-md-4">
+               <img src="images/ghostSmall.png" class="img-responsive center-block" alt="Ghost Blog Icon">
+               <h3>BLOG</h3>
+               <p class="link"><a href="http://thehme.com/">http://thehme.com</a></p>
+            </div>
+            <div class="col-md-4">
+               <img src="images/OctocatSmall.jpg" class="img-responsive center-block" alt="Octocat Icon">
+               <h3>GITHUB</h3>
+               <p class="link"><a href="https://github.com/thehme">https://github.com/thehme</a></p>
+            </div>
+         </div>
+   	</div>
+   </body>
+</html>
