@@ -4,7 +4,9 @@
    	<meta charset="utf-8">
       <!--IE, use best engine-->
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   	<title>Using Bootstrap</title>  
+   	<title>Using Bootstrap</title> 
+      <!--Adding jQuery-->
+      <script type="text/javascript" src="js/jquery.min.js"></script> 
       <!--Adding boostrap JS-->
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <!-- Adding font from web -->
@@ -49,21 +51,79 @@
             <!--Using text-center does not seem to work with img-responsive, so center-block can be used-->
             <!--Adding center-block class to parent row div did not affect the images-->
             <div class="col-md-4">
-               <img src="images/TwitterSmall.png" class="img-responsive center-block" alt="Twitter Icon">
+               <!--Add modal to image within img tag-->
+               <img src="images/TwitterSmall.png" class="img-responsive center-block" alt="Twitter Icon" data-toggle="modal" data-target="#twitter">
                <h3>TWITTER</h3>
                <p class="link"><a href="https://twitter.com/the_hme">https://twitter.com/the_hme</a></p>
             </div>
             <div class="col-md-4">
-               <img src="images/ghostSmall.png" class="img-responsive center-block" alt="Ghost Blog Icon">
+               <img src="images/ghostSmall.png" class="img-responsive center-block" alt="Ghost Blog Icon" data-toggle="modal" data-target="#blog">
                <h3>BLOG</h3>
                <p class="link"><a href="http://thehme.com/">http://thehme.com</a></p>
             </div>
             <div class="col-md-4">
-               <img src="images/OctocatSmall.jpg" class="img-responsive center-block" alt="Octocat Icon">
+               <img src="images/OctocatSmall.jpg" class="img-responsive center-block" alt="Octocat Icon" data-toggle="modal" data-target="#github">
                <h3>GITHUB</h3>
                <p class="link"><a href="https://github.com/thehme">https://github.com/thehme</a></p>
             </div>
          </div>
    	</div>
+      <!-- Modal For Twitter Icon-->
+      <div class="modal fade" id="twitter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Twitter Account</h4>
+            </div>
+            <div class="modal-body">
+               <!--Added center-block to center icon in modal-->
+               <img class="img-responsive center-block" src="images/TwitterSmall.png">
+               I have this account to follow organizations, conferences, and people from fieldd and subjects of my interest. 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--Modal Footer Close-->
+          </div> <!--Modal Content Close-->
+        </div> <!--Modal Dialog Close-->
+      </div> <!--Modal Fade Close-->
+
+      <!-- Modal For Blog Icon-->
+      <div class="modal fade" id="blog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Personal Blog</h4>
+            </div>
+            <div class="modal-body">
+               <!--Added center-block to center icon in modal-->
+               <img class="img-responsive center-block" src="images/ghostSmall.png">
+               I used the open source blogging platform Ghost and manually set up the web server for this blog on an Ubuntu machine, which I run on a Digital Ocean dropplet.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--Modal Footer Close-->
+          </div> <!--Modal Content Close-->
+        </div> <!--Modal Dialog Close-->
+      </div> <!--Modal Fade Close-->
+
+      <!-- Modal For Blog Icon-->
+      <div class="modal fade" id="github" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Projects Repository</h4>
+            </div>
+            <div class="modal-body">
+               <!--Added center-block to center icon in modal-->
+               <img class="img-responsive center-block" src="images/OctocatSmall.jpg">
+               I started using GitHub last year to teach myself version control and found that it was very useful and easy to learn. I currently use it to upload and track all the projects I start, so I can go back to them when I have a chance and continue to work on them.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> <!--Modal Footer Close-->
+          </div> <!--Modal Content Close-->
+        </div> <!--Modal Dialog Close-->
+      </div> <!--Modal Fade Close-->
+
    </body>
 </html>
